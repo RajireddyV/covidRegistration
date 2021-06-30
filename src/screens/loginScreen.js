@@ -26,12 +26,11 @@ const loginScreen = props => {
   const symptom9 = props.route.params.symptom9;
   const symptom10 = props.route.params.symptom10;
   const medicalHistory = props.route.params.medicalHistory;
-  const data = 917702863154;
+
   const whatsapp = link => {
     Linking.canOpenURL(link)
       .then(supported => {
         if (!supported) {
-          console.log('supported', supported);
           Alert.alert(
             'Please install whats app to send direct message to a person via whats app',
           );
